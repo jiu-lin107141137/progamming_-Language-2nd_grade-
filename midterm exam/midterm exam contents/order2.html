@@ -21,7 +21,12 @@
       font-family: Brush Script MT, Brush Script Std, cursive;
     }
   </style>
-  
+  <script type="text/javascript">
+    function showAlert()
+    {
+      alert("已收到訂單!");
+    }
+  </script>
 </head>
 <body style="background: #eeffbb;">
   <br>
@@ -209,7 +214,7 @@
     </div>
 
 
-    <input type="submit" class="btn btn-block btn-dark btn-lg|btn-sm" value="送出" style="margin: 0 auto; width: 200px;">
+    <input type="submit" class="btn btn-block btn-dark btn-lg|btn-sm" value="送出" onclick="showAlert()" style="margin: 0 auto; width: 200px;">
       
     <br>
   </div>
