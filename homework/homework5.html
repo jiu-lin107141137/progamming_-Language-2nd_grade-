@@ -16,7 +16,7 @@
 			"<td colspan=\"3\" align=\"center\" bgcolor=\"black\" style=\"color: #FFFFFF; font-size: 14px; font-weight: bold\">"+
 				"九九乘法表"+
 			"</td>");
-	for (var i = 0, firstNum = 1; i < 3; firstNum++){
+	for (var i = 0, firstNum = 1; i < 3; firstNum % 3 == 0 ? i++ : i, firstNum++){
 		if(firstNum == 4 || firstNum == 7)
 			document.writeln("</tr>");
 		if(firstNum % 3 == 1)
@@ -28,8 +28,6 @@
 				else
 					document.write(firstNum+"*"+j+"="+firstNum*j+"<br>");
 		document.write("</td>");
-		if(firstNum % 3 == 0)
-			i++;
 	}
 	document.write("</tr></thead>");
 </script>
