@@ -4,9 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>菜色介紹</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<link href="Fytx_Tips.css" rel="stylesheet" type="text/css" />
+	<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="Fytx_Tips_Config.js"></script>
+	<script type="text/javascript" src="Fytx_Tips.js"></script>
 	<style type="text/css">
 		.title{
 			background: #ffc8b4;
@@ -21,7 +29,16 @@
 			font-family: Brush Script MT, Brush Script Std, cursive;
 		}
 	</style>
-	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#confirmbtn").click(function(){
+			$.confirm("提示信息","確定要點餐了嗎？");
+		});
+		$.isok=function(){
+			window.open('https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm exam contents/order1.html','_blank');
+		}
+	});
+	</script>
 </head>
 <body style="background: #eeffbb;">
 	<br>
@@ -36,7 +53,8 @@
 		<br>
 		<div class="container">
 		<div class="media">
-			<img src="dishes/蝦餅.png" class="mr-3" alt="...">
+			<a class="fancybox-effects-a" href="dishes/蝦餅B.png" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+			<img src="dishes/蝦餅.png" class="mr-3" alt="..."></a>
 		  	<div class="media-body" style="right: 20px;">
 		    	<h5 class="mt-2" style="font-size: 25px;">月亮蝦餅 八片</h5>
 	    	    本店是用百分百的新鮮蝦泥製作而成的，不加添加任何的魚漿，外皮則是用春捲皮下去包覆的，吃起來口感非常的酥脆，是非常開胃的炸物。售價為350$
@@ -50,8 +68,8 @@
 	<br>
 	<div class="container">
 		<div class="media">
-			
-			<img src="dishes/綠咖哩.png" class="mr-3" alt="...">
+			<a class="fancybox-effects-a" href="dishes/綠咖哩B.png" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+			<img src="dishes/綠咖哩.png" class="mr-3" alt="..."></a>
 			<div class="media-body">
 		    	<h5 class="mt-2" style="font-size: 25px;">綠咖喱椰汁雞肉</h5>
 		    	綠咖喱是是屬於較為辣的咖喱，在外面會比較少吃到,是泰國很傳統的口味，為了讓較不敢吃辣的您也能品嘗到這道菜的美味,本店特別使用了椰奶下去調製，味道更為香濃，這道菜也是店長的特別推薦，相信您一定會喜愛。售價為280$
@@ -65,10 +83,10 @@
 	<br>
 	<div class="container">
 		<div class="media">
-		  	
-		  		<img src="dishes/BBQ.png" class="mr-3" alt="...">
-		  		<div class="media-body">
-		    	<h5 class="mt-2" style="font-size: 25px;">BBQ嫩烤松阪豬</h5>
+		  	<a class="fancybox-effects-a" href="dishes/BBQB.png" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+	  		<img src="dishes/BBQ.png" class="mr-3" alt="..."></a>
+	  		<div class="media-body">
+	    	<h5 class="mt-2" style="font-size: 25px;">BBQ嫩烤松阪豬</h5>
 		    	這道松阪豬是有特別醃製過的，切法是厚斜切法，口感也不同，作為搭配的烤鳳梨片以及特調的沾醬（一個是泰式酸辣醬味道比較清爽好吃，一個是蝦膏醬味道偏濃郁），豬的部位是豬上頸肉，口感非常的嫩，也是非常推薦的一道料理。 售價為:395$
 		 	</div>
 		</div>
@@ -80,10 +98,10 @@
 	<br>
 	<div class="container">
 		<div class="media">
-		  
-		  		<img src="dishes/雞.png" class="mr-3" alt="...">	
-		  		<div class="media-body">
-		    	<h5 class="mt-2" style="font-size: 25px;">泰北當紅炸子雞</h5>
+		    <a class="fancybox-effects-a" href="dishes/雞B.png" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+	  		<img src="dishes/雞.png" class="mr-3" alt="...">	</a>
+	  		<div class="media-body">
+	    	<h5 class="mt-2" style="font-size: 25px;">泰北當紅炸子雞</h5>
 		    	這道菜是泰國北部非常有人氣的炸雞料理，酥酥脆脆的雞腿肉，淋上主廚的特調的醬汁，在搭配炸過的玉米筍以及旁邊的洋蔥小黃瓜，口感非常的有層次，味道也非常棒，是道老少咸宜的餐點。售價為350$
 		 	</div>
 		</div>
@@ -95,9 +113,10 @@
 	<br>
 	<div class="container">
 		<div class="media">
-		  		<img src="dishes/菜.png" class="mr-3" alt="...">
-		  		<div class="media-body">
-		    	<h5 class="mt-2" style="font-size: 25px;">蝦醬高麗菜</h5>
+			<a class="fancybox-effects-a" href="dishes/菜B.png" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+	  		<img src="dishes/菜.png" class="mr-3" alt="..."></a>
+	  		<div class="media-body">
+	    	<h5 class="mt-2" style="font-size: 25px;">蝦醬高麗菜</h5>
 		    	本店使用的是與農夫契作高麗菜，當天產地直送，保證非常新鮮，在搭配調製過的蝦醬下去快炒的料理，入口的軟硬度剛好，吃下去的時候爽脆多汁，蔬菜的鮮甜跟蝦醬的鹹味做搭配，堪稱簡單卻完美的一道料理。售價為200$
 		 	</div>
 		</div>
@@ -106,11 +125,27 @@
 	<br>
 	</div>
 	<br>
-	<div style="position: fixed; right: 5px; bottom: 5px; width: 200px; height: 200px;">
-		<img src="https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm exam contents/logo.png">
+
+	<div style="position: fixed; right: 5px; bottom: 20px; width: 200px; height: 200px;" id="confirmbtn">
+		<div class="bg-white">
+			<img src="https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm exam contents/logo.png">
+			<span class="text-info" style="bottom: 5px;">order</span>
+		</div>
 	</div>
+
 	<center>
         <a href="https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm_exam.html">home page</a>
     </center>
 </body>
+<script type="text/javascript">
+	$(".fancybox-effects-a").fancybox({
+		openEffect	: 'elastic',
+    	closeEffect	: 'elastic',
+    	helpers : {
+    		title : {
+    			type : 'inside'
+    		}
+    	}
+	})
+</script>
 </html>

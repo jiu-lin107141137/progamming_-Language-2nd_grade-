@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="css/form.css" rel="stylesheet" type="text/css">
+  <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+  <script src="https://www.jq22.com/jquery/jquery-migrate-1.2.1.min.js"></script>
+  <link href="Fytx_Tips.css" rel="stylesheet" type="text/css" />
+  <script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="Fytx_Tips_Config.js"></script>
+  <script type="text/javascript" src="Fytx_Tips.js"></script>
   <style type="text/css">
     .title{
       background: #ffc8b4;
@@ -26,6 +34,15 @@
     {
       alert("已收到訂單!");
     }
+
+    $(document).ready(function(){
+      $("#confirmbtn").click(function(){
+        $.confirm("提示信息","確定要點餐了嗎？");
+      });
+      $.isok=function(){
+        window.open('https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm exam contents/order1.html','_blank');
+      }
+    });
   </script>
 </head>
 <body style="background: #eeffbb;">
@@ -38,17 +55,19 @@
   <br>
   <div style="margin: 0 auto; width: 90%; border-style: groove; border: 3; border-color: red;">
     <br>
-    <div class="input-group mb-3" style="width: 20%; left: 20px;">
-      <div class="input-group-prepend">
-        <label class="input-group-text" for="inputGroupSelect01">用餐方式</label>
+    <a href="https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm exam contents/order2.html" style="padding-left: 20px;">我要外送</a>
+    <from>
+      <div class="input-group mb-3" style="width: 20%; left: 20px;">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">用餐方式</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01">
+          <option selected>Choose...</option>
+          <option value="1">內用</option>
+          <option value="2">外帶</option>
+        </select>
       </div>
-      <select class="custom-select" id="inputGroupSelect01">
-        <option selected>Choose...</option>
-        <option value="1">內用</option>
-        <option value="2">外帶</option>
-      </select>
-    </div>
-
+    </from>
     <div class="input-group mb-3" style="width: 20%; left: 20px;">
       <div class="input-group-prepend">
         <label class="input-group-text" for="inputGroupSelect01">桌號 (內用再填)</label>
@@ -253,8 +272,11 @@
     <br>
   </div>
   <br>
-  <div style="position: fixed; right: 5px; bottom: 5px; width: 200px; height: 200px;">
-    <img src="https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm exam contents/logo.png">
+  <div style="position: fixed; right: 5px; bottom: 20px; width: 200px; height: 200px;" id="confirmbtn">
+    <div class="bg-white">
+      <img src="https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm exam contents/logo.png">
+      <span class="text-info" style="bottom: 5px;">order</span>
+    </div>
   </div>
   <center>
         <a href="https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm_exam.html">home page</a>

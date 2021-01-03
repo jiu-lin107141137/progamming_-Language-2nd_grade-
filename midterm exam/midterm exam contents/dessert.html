@@ -4,9 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>甜點、飲品介紹</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<link href="Fytx_Tips.css" rel="stylesheet" type="text/css" />
+	<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="Fytx_Tips_Config.js"></script>
+	<script type="text/javascript" src="Fytx_Tips.js"></script>
 	<style type="text/css">
 		.title{
 			background: #ffc8b4;
@@ -21,7 +29,16 @@
 			font-family: Brush Script MT, Brush Script Std, cursive;
 		}
 	</style>
-	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#confirmbtn").click(function(){
+			$.confirm("提示信息","確定要點餐了嗎？");
+		});
+		$.isok=function(){
+			window.open('https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm exam contents/order1.html','_blank');
+		}
+	});
+	</script>
 </head>
 <body style="background: #eeffbb;">
 	<br>
@@ -36,7 +53,8 @@
 		<br>
 		<div class="container">
 		<div class="media">
-			<img src="dessert/冰奶.png" class="mr-3" alt="...">
+			<a class="fancybox-effects-a" href="dessert/冰奶B.png" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+			<img src="dessert/冰奶.png" class="mr-3" alt="..."></a>
 		  	<div class="media-body" style="right: 20px;">
 		    	<h5 class="mt-2" style="font-size: 25px;">泰式冰奶茶（冰或熱）</h5>
 	    	    這杯精心調製的奶茶是用泰國進口的茶葉下去熬煮的，茶味非常的濃郁，以及使用煉乳跟奶水下去調製，非常的獨特香甜，是頗具特色的泰國風味飲料。 售價為120$
@@ -50,8 +68,8 @@
 	<br>
 	<div class="container">
 		<div class="media">
-			
-			<img src="dessert/檸檬.png" class="mr-3" alt="...">
+			<a class="fancybox-effects-a" href="dessert/檸檬B.png" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+			<img src="dessert/檸檬.png" class="mr-3" alt="..."></a>
 			<div class="media-body">
 		    	<h5 class="mt-2" style="font-size: 25px;">冰鎮檸檬香綠茶</h5>
 		    	本店使用的是新鮮的檸檬汁和特別挑選過的綠茶茶葉，再加入天然的紅糖做成的冰沙式飲料，喝起來酸酸甜甜的清涼又暢快，本身喝起來也不會嘴巴有黏黏的不適感，非常適合搭配今天的泰國菜色。售價為120$
@@ -65,11 +83,11 @@
 	<br>
 	<div class="container">
 		<div class="media">
-		  	
-		  		<img src="dessert/咖啡.png" class="mr-3" alt="...">
-		  		<div class="media-body">
-		    	<h5 class="mt-2" style="font-size: 25px;">越南咖啡（冰或熱）</h5>
-		    	這杯來自越南的咖啡最特別的是它的喝法，用的是咖啡衝濾器以滴漏的方式泡製，咖啡味比一般的美式咖啡更濃厚，所以杯底會加入煉乳，喝之前攪拌一下，味道非常香濃好喝，是對於喜歡喝咖啡的您非常推薦的一項飲品。售價為120$
+		  	<a class="fancybox-effects-a" href="dessert/咖啡B.png" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+			<img src="dessert/咖啡.png" class="mr-3" alt="..."></a>
+	  		<div class="media-body">
+	    	<h5 class="mt-2" style="font-size: 25px;">越南咖啡（冰或熱）</h5>
+	    		這杯來自越南的咖啡最特別的是它的喝法，用的是咖啡衝濾器以滴漏的方式泡製，咖啡味比一般的美式咖啡更濃厚，所以杯底會加入煉乳，喝之前攪拌一下，味道非常香濃好喝，是對於喜歡喝咖啡的您非常推薦的一項飲品。售價為120$
 		 	</div>
 		</div>
 	</div>
@@ -80,11 +98,12 @@
 	<br>
 	<div class="container">
 		<div class="media">
-		  
-		  		<img src="dessert/mogito.png" class="mr-3" alt="...">	
-		  		<div class="media-body">
-		    	<h5 class="mt-2" style="font-size: 25px;">Mogito</h5>
-		    	這是一項非常有泰國風情的調酒，是用新鮮的薄荷葉加上新鮮檸檬汁搭配當作底酒的萊姆酒調製而成的，本身喝起來非常的清爽，不管是視覺或是情調都能做到加分的一項飲品，酒精濃度介於11到13度唷。售價為180$
+			<!-- <a id="single_2" href="http://farm1.staticflickr.com/756/22625719192_fdc3369588_b.jpg" title="Transparence (delphine.cury)"><img src="http://farm1.staticflickr.com/756/22625719192_fdc3369588_m.jpg" alt="" /></a> -->
+		  	<a class="fancybox-effects-a" href="dessert/mogitoB.png" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+			<img src="dessert/mogito.png" class="mr-3" alt="..."></a>
+	  		<div class="media-body">
+	    	<h5 class="mt-2" style="font-size: 25px;">Mogito</h5>
+	    		這是一項非常有泰國風情的調酒，是用新鮮的薄荷葉加上新鮮檸檬汁搭配當作底酒的萊姆酒調製而成的，本身喝起來非常的清爽，不管是視覺或是情調都能做到加分的一項飲品，酒精濃度介於11到13度唷。售價為180$
 		 	</div>
 		</div>
 	</div>
@@ -95,10 +114,10 @@
 	<br>
 	<div class="container">
 		<div class="media">
-		  	
-		  		<img src="dessert/摩摩喳喳.png" class="mr-3" alt="...">
-		  		<div class="media-body">
-		    	<h5 class="mt-2" style="font-size: 25px;">摩摩渣渣（冰或熱）</h5>
+		  	<a class="fancybox-effects-a" href="dessert/摩摩喳喳B.png" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+			<img src="dessert/摩摩喳喳.png" class="mr-3" alt="..."></a>
+	  		<div class="media-body">
+	    	<h5 class="mt-2" style="font-size: 25px;">摩摩渣渣（冰或熱）</h5>
 		    	這是泰國非常道地的一項甜品，裡面的配料有西米露及去殼的綠豆沙之外還有豐富的熱帶水果，如龍鳳果、雅達枳，波羅蜜，再加入香濃的椰漿，最後撒上我們獨家手工特製的紅寶石跟芋珍珠，是非常上相的甜點，非常推薦給各位。價格為100$
 		 	</div>
 		</div>
@@ -110,10 +129,10 @@
 	<br>
 	<div class="container">
 		<div class="media">
-		  
-		  		<img src="dessert/香蕉捲.png" class="mr-3" alt="...">
-		  			<div class="media-body">
-		    	<h5 class="mt-2" style="font-size: 25px;">冰淇淋起司香蕉卷</h5>
+		  	<a class="fancybox-effects-a" href="dessert/香蕉捲B.png" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+			<img src="dessert/香蕉捲.png" class="mr-3" alt="..."></a>
+  			<div class="media-body">
+	    	<h5 class="mt-2" style="font-size: 25px;">冰淇淋起司香蕉卷</h5>
 		    	這是道現炸的香蕉卷，吃起來非常的香又酥，還有淡淡的起司味做點綴，搭配一旁的椰子冰淇淋，味道更為濃郁清爽可口，真的很好吃喔。售價為180$
 		 	</div>
 		</div>
@@ -125,11 +144,10 @@
 	<br>
 	<div class="container">
 		<div class="media">
-		  
-		  		<img src="dessert/椰香.png" class="mr-3" alt="...">	
-		  		<div class="media-body">
-		    	<h5 class="mt-2" style="font-size: 25px;">
-		    	椰香芋珍珠</h5>
+		  	<a class="fancybox-effects-a" href="dessert/椰香B.png" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+			<img src="dessert/椰香.png" class="mr-3" alt="..."></a>
+	  		<div class="media-body">
+	    	<h5 class="mt-2" style="font-size: 25px;">椰香芋珍珠</h5>
 		    	獨家特製Q又鬆軟的芋珍珠，再搭配上西米露跟椰漿，吃起來非常的好吃。售價為90$
 		 	</div>
 		</div>
@@ -141,10 +159,10 @@
 	<br>
 	<div class="container">
 		<div class="media">
-		<img src="dessert/糯米.png" class="mr-3" alt="...">
+		  	<a class="fancybox-effects-a" href="dessert/糯米B.png" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">
+			<img src="dessert/糯米.png" class="mr-3" alt="..."></a>
 			<div class="media-body">
-		    	<h5 class="mt-2" style="font-size: 25px;">
-		    	芋香黑糯米（冰或熱)</h5>
+		    	<h5 class="mt-2" style="font-size: 25px;">芋香黑糯米（冰或熱)</h5>
 		    	這是一項用黑糯米當作主體的甜點，黑糯米非常的香Q，又吃得到芋頭的蓬鬆口感，最後搭配上香濃的椰漿，如果是吃熱的會更香更濃郁。售價為100$
 		 	</div>
 		</div>
@@ -154,11 +172,26 @@
 
 	</div>
 	<br>
-	<div style="position: fixed; right: 5px; bottom: 5px; width: 200px; height: 200px;">
-		<img src="https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm exam contents/logo.png">
+	<div style="position: fixed; right: 5px; bottom: 20px; width: 200px; height: 200px;" id="confirmbtn">
+		<div class="bg-white">
+			<img src="https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm exam contents/logo.png">
+			<span class="text-info" style="bottom: 5px;">order</span>
+		</div>
 	</div>
 	<center>
         <a href="https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm_exam.html">home page</a>
     </center>
 </body>
+<script type="text/javascript">
+	$(".fancybox-effects-a").fancybox({
+		openEffect	: 'elastic',
+    	closeEffect	: 'elastic',
+
+    	helpers : {
+    		title : {
+    			type : 'inside'
+    		}
+    	}
+	})
+</script>
 </html>

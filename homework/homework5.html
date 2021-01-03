@@ -17,17 +17,17 @@
 				"九九乘法表"+
 			"</td>");
 	for (var i = 0, firstNum = 1; i < 3; firstNum % 3 == 0 ? i++ : i, firstNum++){
-		if(firstNum == 4 || firstNum == 7)
-			document.writeln("</tr>");
 		if(firstNum % 3 == 1)
 			document.writeln("<tr align=\"center\">");
 		document.write("<td>");
-			for (var j = 1; j < 10; j++)
-				if(firstNum*j < 10)
-					document.write(firstNum+"*"+j+"=&nbsp;&nbsp;"+firstNum*j+"<br>");
-				else
-					document.write(firstNum+"*"+j+"="+firstNum*j+"<br>");
+		for (var j = 1; j < 10; j++)
+			if(firstNum*j < 10)
+				document.write(firstNum+"*"+j+"=&nbsp;&nbsp;"+firstNum*j+"<br>");
+			else
+				document.write(firstNum+"*"+j+"="+firstNum*j+"<br>");
 		document.write("</td>");
+		if(firstNum % 3 == 1)
+			document.writeln("</tr>");
 	}
 	document.write("</tr></thead>");
 </script>
