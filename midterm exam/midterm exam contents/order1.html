@@ -51,25 +51,29 @@
   <div style="margin: 0 auto; width: 90%; border-style: groove; border: 3; border-color: red;">
     <br>
     <a href="https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm exam contents/order2.html" style="padding-left: 20px;">我要外送</a>
+
+
     <from>
       <div class="input-group mb-3" style="width: 20%; left: 20px;">
         <div class="input-group-prepend">
           <label class="input-group-text" for="inputGroupSelect01">用餐方式</label>
         </div>
-        <select class="custom-select" id="inputGroupSelect01">
-          <option selected>Choose...</option>
+        <select class="custom-select" id="inputGroupSelect01" onchange="selectOption(this.options[this.selectedIndex].value)">
+          <option value="0" selected>Choose...</option>
           <option value="1">內用</option>
           <option value="2">外帶</option>
         </select>
       </div>
-    </from>
-    <div class="input-group mb-3" style="width: 20%; left: 20px;">
-      <div class="input-group-prepend">
-        <label class="input-group-text" for="inputGroupSelect01">桌號 (內用再填)</label>
+      <div class="input-group mb-3" style="width: 20%; left: 20px;">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">桌號 (內用再填)</label>
+        </div>
+        <div style="width: 5px;"></div>
+        <input type="number" step="1" min="0" max="50" id="tableNumber" disabled="disabled">
       </div>
-      <div style="width: 5px;"></div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
+    </from>
+
+
     <br>
     <h4>&nbsp;&nbsp;&nbsp;餐點:</h4>
     <div class="input-group mb-3"  style="left: 20px; width: 30%;">
@@ -277,4 +281,12 @@
         <a href="https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm_exam.html">home page</a>
     </center>
 </body>
+<script type="text/javascript">
+  function selectOption(x) {
+    if(x != "1")
+      document.getElementById("tableNumber").disabled = "disabled";
+    else
+      document.getElementById("tableNumber").removeAttribute("disabled");
+  }
+</script>
 </html>
