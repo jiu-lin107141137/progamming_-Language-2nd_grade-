@@ -283,8 +283,9 @@
 </body>
 <script type="text/javascript">
   function selectOption(x) {
-    if(x != "1")
+    if(x != "1"){
       document.getElementById("tableNumber").disabled = "disabled";
+    }
     else
       document.getElementById("tableNumber").removeAttribute("disabled");
   }

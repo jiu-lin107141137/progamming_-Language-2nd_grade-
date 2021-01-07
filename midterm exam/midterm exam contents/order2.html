@@ -25,10 +25,10 @@
     }
   </style>
   <script type="text/javascript">
-    function showAlert()
-    {
-      alert("已收到訂單!");
-    }
+    // function showAlert()
+    // {
+    //   alert("已收到訂單!");
+    // }
     $(document).ready(function(){
       $("#confirmbtn").click(function(){
         $.confirm("提示信息","確定要點餐了嗎？");
@@ -68,7 +68,7 @@
         <div class="form-row">
           <div style="width: 20px;"></div>
           <div class="col-5">
-            <input type="text" class="form-control" id="formGroupExampleInput address" placeholder="XX市XX區XX路XX號" style="width: 200px;">
+            <input type="text" class="form-control" id="address1" id="formGroupExampleInput" placeholder="XX市XX區XX路XX號" style="width: 200px;">
           </div>
         </div>
       </div>
@@ -77,212 +77,211 @@
         <div class="form-row">
           <div style="width: 20px;"></div>
           <div class="col-5">
-            <input type="tel" class="form-control" id="formGroupExampleInput2 phonenumber" placeholder="0000-000-000" style="width: 200px;">
+            <input type="tel" class="form-control" id="phonenumber" id="formGroupExampleInput2 " placeholder="0000-000-000" style="width: 200px;">
           </div>
         </div>
       </div>
-    </form>
     <br>
 
+      <h4>&nbsp;&nbsp;&nbsp;餐點:</h4>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;月亮蝦餅 350
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;綠咖喱椰汁雞肉 280
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;BBQ嫩烤松阪豬 395
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;泰北當紅炸子雞 350
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;蝦醬高麗菜 200
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <br>
+      <h4>&nbsp;&nbsp;&nbsp;甜點 飲品:</h4>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;泰式冰奶茶 (冰) 120
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;泰式冰奶茶 (熱) 120
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;冰鎮檸檬香綠茶 120
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;越南咖啡(冰) 120
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;越南咖啡(熱) 120
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;Mogito 180
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;摩摩渣渣(冰) 100
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;摩摩渣渣(熱) 100
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;冰淇淋起司香蕉卷 180
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;椰香芋珍珠 90
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;芋香黑糯米(冰) 100
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
+      <div class="input-group mb-3"  style="left: 20px; width: 30%;">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" class="checkboxes" onchange="spend()" aria-label="Checkbox for following text input">
+          </div>
+          <div class="input-group-prepend" style="width: 200px;">
+            &nbsp;&nbsp;&nbsp;&nbsp;芋香黑糯米(熱) 100
+          </div>
+        </div>
+        <input type="number" class="nums" onchange="spend()" step="1" min="0" max="50">
+      </div>
 
-    <h4>&nbsp;&nbsp;&nbsp;餐點:</h4>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;月亮蝦餅 350
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;綠咖喱椰汁雞肉 280
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;BBQ嫩烤松阪豬 395
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;泰北當紅炸子雞 350
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;蝦醬高麗菜 200
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <br>
-    <h4>&nbsp;&nbsp;&nbsp;甜點 飲品:</h4>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;泰式冰奶茶 (冰) 120
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;泰式冰奶茶 (熱) 120
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;冰鎮檸檬香綠茶 120
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;越南咖啡(冰) 120
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;越南咖啡(熱) 120
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;Mogito 180
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;摩摩渣渣(冰) 100
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;摩摩渣渣(熱) 100
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;冰淇淋起司香蕉卷 180
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;椰香芋珍珠 90
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;芋香黑糯米(冰) 100
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
-    <div class="input-group mb-3"  style="left: 20px; width: 30%;">
-      <div class="input-group-prepend">
-        <div class="input-group-text">
-          <input type="checkbox" aria-label="Checkbox for following text input">
-        </div>
-        <div class="input-group-prepend" style="width: 200px;">
-          &nbsp;&nbsp;&nbsp;&nbsp;芋香黑糯米(熱) 100
-        </div>
-      </div>
-      <input type="number" step="1" min="0" max="50">
-    </div>
 
-
-    <input type="submit" class="btn btn-block btn-dark btn-lg|btn-sm" value="送出" onclick="showAlert()" style="margin: 0 auto; width: 200px;">
-      
+      <input type="submit" class="btn btn-block btn-dark btn-lg|btn-sm" value="送出" onclick="check()" style="margin: 0 auto; width: 200px;">
+    </form> 
     <br>
   </div>
   <br>
-  <div style="position: fixed; right: 5px; bottom: 20px; width: 200px; height: 200px;" id="confirmbtn">
+  <div style="position: fixed; right: 5px; bottom: 95px; width: 200px; height: 200px;">
+    <div class="text-dark" id="totalPrice" style="font-size: 36px;">共:0元</div>
     <div class="bg-white">
       <img src="https://jiu-lin107141137.github.io/progamming_-Language-2nd_grade-/midterm exam/midterm exam contents/logo.png">
       <span class="text-info" style="bottom: 5px;">order</span>
@@ -293,6 +292,55 @@
     </center>
 </body>
 <script type="text/javascript">
-  
+  function check() {
+    firstname = document.getElementById('firstname');
+    secondname = document.getElementById('secondname');
+    address1 = document.getElementById("address1");
+    phonenumber = document.getElementById('phonenumber');
+    if(!isAlpha(firstname))
+      alert("wrong firstname!");
+    else if(!isAlpha(secondname))
+      alert("wrong secondname!");
+    else if(address1.value == "")
+      alert("address is empty!");
+    else if(!checkPhone(phonenumber))
+      alert("wrong phonenumber!");
+    return false;
+  }
+  function isAlpha(x) {
+    if(x.value == "")
+      return false;
+    for(var i = 0; i < x.value.length; i++)
+      if(!((x.value.charAt(i) >= 'A' && x.value.charAt(i) <= 'Z') || (x.value.charAt(i) >= 'a' && x.value.charAt(i) <= 'z')))
+        return false;
+    return true;
+  }
+  function checkPhone(x) {
+    if(x.value == "")
+      return false;
+    str = x.value;
+    if(str.length != 12)
+      return false;
+    if(!(str.charAt(4) == "-" && str.charAt(8) == "-"))
+      return false;
+    for(var i = 0; i < 12; i++)
+      if(i == 4 || i == 8)
+        continue;
+      else if(!(str.charAt(i) >= "0" && str.charAt(i) <= "9"))
+        return false;
+    return true;
+  }
+  function spend() {
+    var totalPrice = document.getElementById('totalPrice');
+    var price = [350,280,395,350,200,120,120,120,120,120,180,100,100,180,90,100,100];
+    nums = document.getElementsByClassName('nums');
+    checkboxes = document.getElementsByClassName('checkboxes');
+
+    var sum = 0;
+    for (var i = checkboxes.length - 1; i >= 0; i--)
+      if(checkboxes[i].checked)
+        sum += nums[i].value*price[i];
+    document.getElementById("totalPrice").innerHTML = "共:"+sum+"元";
+  }
 </script>
 </html>
